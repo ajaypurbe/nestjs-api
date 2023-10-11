@@ -1,0 +1,16 @@
+version: '2.0' # Please note: '2.0' is the correct version format, not '24.0.6'
+
+services:
+  dev-db:
+    image: postgres:13
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=123
+      - POSTGRES_DB=nest
+    networks:
+      - ajaypurbe
+
+networks:
+  ajaypurbe:
