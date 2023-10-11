@@ -11,8 +11,8 @@ datasource db {
 }
 model User {
   id Int @id @default(autoincrement())
-  createdAt DateTime @default(now())
-  updateAt DateTime @updateAt
+   createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
    email String
   hash String?
@@ -20,11 +20,10 @@ model User {
   Firstname String?
   Lastname String?
 }
-model Bookmar {
+model Bookmark {
   id Int @id @default(autoincrement())
-  createdAt DateTime @default(now())
-  updateAt DateTime @updateAt
-
+   createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
   title String
   description String?
   link String
